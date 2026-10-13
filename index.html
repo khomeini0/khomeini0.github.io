@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The 20-20-20 Rule: What It Is and How to Do It | Ocular</title>
+  <meta name="description" content="Every 20 minutes, look at something 20 feet away for 20 seconds. What the 20-20-20 rule is, how to do it, and a free Android timer that reminds you.">
+  <link rel="canonical" href="https://khomeini0.github.io/">
+  <link rel="icon" href="assets/ocular-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The 20-20-20 Rule: What It Is and How to Do It">
+  <meta property="og:description" content="Every 20 minutes, look at something 20 feet away for 20 seconds. A simple habit for tired screen eyes, plus a free Android timer.">
+  <meta property="og:url" content="https://khomeini0.github.io/">
+  <meta property="og:image" content="https://khomeini0.github.io/assets/ocular-timer.jpg">
+  <meta name="theme-color" content="#0b1214">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the 20-20-20 rule?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every 20 minutes of screen time, look at something about 20 feet (6 metres) away for at least 20 seconds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the 20-20-20 rule cure eye strain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. It is a simple habit that builds regular pauses into screen work. It is not a medical treatment, and research on how much it helps is limited. If symptoms continue, see an eye care professional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to look exactly 20 feet away?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The point is to shift your focus to something far away, such as a view out of a window or the far side of a room."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0b1214;
+      --card: #141d20;
+      --card-2: #1b292d;
+      --line: rgba(255, 255, 255, 0.10);
+      --text: #f1f6f5;
+      --muted: #9db0ad;
+      --accent: #4fd1c5;
+      --accent-ink: #062321;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+    header.top { padding: 22px 0; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--text); text-decoration: none; font-weight: 650; letter-spacing: -0.01em; }
+    .brand img { width: 36px; height: 36px; border-radius: 10px; }
+    .hero { padding: 36px 0 56px; }
+    h1 { font-size: clamp(2rem, 6vw, 3.1rem); line-height: 1.12; letter-spacing: -0.03em; margin: 0 0 18px; font-weight: 700; text-wrap: balance; }
+    h2 { font-size: clamp(1.4rem, 4vw, 1.8rem); letter-spacing: -0.02em; margin: 0 0 14px; font-weight: 650; text-wrap: balance; }
+    h3 { font-size: 1.05rem; margin: 0 0 6px; font-weight: 650; }
+    p { margin: 0 0 14px; max-width: 65ch; }
+    .lead { font-size: 1.18rem; color: var(--muted); max-width: 60ch; }
+    .rule {
+      display: inline-flex; gap: 10px; flex-wrap: wrap; margin: 6px 0 26px;
+    }
+    .rule span {
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+      padding: 10px 16px; font-weight: 600; color: var(--accent);
+    }
+    .btn {
+      display: inline-block; background: var(--accent); color: var(--accent-ink);
+      padding: 14px 24px; border-radius: 14px; font-weight: 650; text-decoration: none;
+      transition: transform .15s ease, box-shadow .15s ease;
+      box-shadow: 0 8px 24px rgba(79, 209, 197, 0.18);
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: translateY(1px); }
+    .btn:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    section { padding: 40px 0; border-top: 1px solid var(--line); }
+    ol.steps { padding: 0; margin: 20px 0 0; list-style: none; counter-reset: s; display: grid; gap: 12px; }
+    ol.steps li {
+      counter-increment: s; background: var(--card); border: 1px solid var(--line);
+      border-radius: 18px; padding: 16px 18px 16px 62px; position: relative;
+    }
+    ol.steps li::before {
+      content: counter(s); position: absolute; left: 16px; top: 14px; width: 32px; height: 32px;
+      border-radius: 10px; background: var(--card-2); color: var(--accent); font-weight: 700;
+      display: grid; place-items: center;
+    }
+    .tips { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 20px; }
+    .tip { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px 18px; }
+    .tip p { margin: 0; color: var(--muted); }
+    details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px 18px; margin-bottom: 10px; }
+    summary { cursor: pointer; font-weight: 600; }
+    details p { margin: 10px 0 0; color: var(--muted); }
+    .app { display: grid; gap: 28px; align-items: center; }
+    @media (min-width: 760px) { .app { grid-template-columns: 1.1fr 1fr; } }
+    .shots { display: flex; gap: 14px; justify-content: center; }
+    .shots img { width: 46%; max-width: 230px; height: auto; border-radius: 18px; border: 1px solid var(--line); }
+    ul.feat { padding-left: 1.1em; margin: 0 0 18px; color: var(--muted); }
+    ul.feat li { margin-bottom: 6px; }
+    ul.feat strong { color: var(--text); font-weight: 600; }
+    .note { color: var(--muted); font-size: 0.95rem; }
+    footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--muted); font-size: 0.95rem; }
+    footer a { color: var(--text); }
+    a { color: var(--accent); }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="#top"><img src="assets/ocular-icon.png" alt="Ocular app icon" width="36" height="36"> Ocular</a>
+    </header>
+
+    <main id="top">
+      <div class="hero">
+        <h1>The 20-20-20 rule: a simple habit for tired screen eyes</h1>
+        <div class="rule" aria-label="The rule in short">
+          <span>every 20 minutes</span><span>look 20 feet away</span><span>for 20 seconds</span>
+        </div>
+        <p class="lead">What the rule is, how to do it, and a free Android timer that does the reminding for you.</p>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.eyecare.ocular202020">Get Ocular on Google Play</a>
+      </div>
+
+      <section>
+        <h2>What is the 20-20-20 rule?</h2>
+        <p>Every 20 minutes you spend looking at a screen, look at something about 20 feet (6 metres) away for at least 20 seconds. That is the whole rule.</p>
+        <p>It is widely credited to the optometrist Dr. Jeffrey Anshel and is commonly recommended by eye care professionals as a way to ease digital eye strain.</p>
+      </section>
+
+      <section>
+        <h2>Why it can help</h2>
+        <p>When you concentrate on a screen you tend to blink less, and your eyes stay focused at one close distance for a long time. The rule builds in regular pauses so your eyes can change focus and you can blink normally again.</p>
+        <p class="note">It is a habit, not a treatment. Research on exactly how much it helps is limited, and it does not replace an eye exam.</p>
+      </section>
+
+      <section>
+        <h2>How to do it</h2>
+        <ol class="steps">
+          <li><strong>Set a reminder.</strong> It is easy to forget when you are absorbed in work, so use a timer.</li>
+          <li><strong>Look at something far away.</strong> A window view or the far side of the room works. It does not have to be exactly 20 feet.</li>
+          <li><strong>Hold it for 20 seconds.</strong> Let your eyes relax and your focus soften.</li>
+          <li><strong>Blink slowly a few times,</strong> then go back to what you were doing.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>A few simple extras</h2>
+        <div class="tips">
+          <div class="tip"><h3>Blink on purpose</h3><p>Full, slow blinks help spread tears across the eye surface.</p></div>
+          <div class="tip"><h3>Check your setup</h3><p>Keep the screen about an arm's length away, with the top near eye level.</p></div>
+          <div class="tip"><h3>Mind the lighting</h3><p>Avoid glare from windows or lamps on the screen.</p></div>
+          <div class="tip"><h3>See a professional</h3><p>If discomfort or blurry vision keeps coming back, book an eye exam.</p></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Common questions</h2>
+        <details>
+          <summary>Does the 20-20-20 rule cure eye strain?</summary>
+          <p>No. It is a simple habit that builds regular pauses into screen work. It is not a medical treatment. If symptoms continue, see an eye care professional.</p>
+        </details>
+        <details>
+          <summary>Do I need to look exactly 20 feet away?</summary>
+          <p>No. The aim is to shift your focus to something far away, such as a view out of a window or the far side of a room.</p>
+        </details>
+        <details>
+          <summary>What if I forget to take the breaks?</summary>
+          <p>That is the usual problem, which is why most people use a timer or a reminder app.</p>
+        </details>
+      </section>
+
+      <section>
+        <h2>Ocular: the reminder app</h2>
+        <div class="app">
+          <div>
+            <p>Ocular is an Android app built around the 20-20-20 rule.</p>
+            <ul class="feat">
+              <li><strong>Break screen over other apps.</strong> It needs the "Display over other apps" permission.</li>
+              <li><strong>Floating timer badge</strong> while you use other apps.</li>
+              <li><strong>Pauses during calls</strong> and, as a beta Pro option, during video playback.</li>
+              <li><strong>Daily goal and streaks</strong> to help the habit stick.</li>
+              <li><strong>Pro (one-time purchase):</strong> removes ads and adds guided eye exercises, a recovery overview and optional background chimes.</li>
+            </ul>
+            <p class="note">Free to use with ads. No account needed.</p>
+            <a class="btn" href="https://play.google.com/store/apps/details?id=com.eyecare.ocular202020">Get Ocular on Google Play</a>
+          </div>
+          <div class="shots">
+            <img src="assets/ocular-timer.jpg" alt="Ocular timer screen showing a 20-minute focus countdown" width="540" height="960" loading="lazy">
+            <img src="assets/ocular-break.jpg" alt="Ocular break screen asking you to look 20 feet away and blink" width="540" height="960" loading="lazy">
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <p>Ocular is made by Limit Breaker Studios. This page is general information and is not medical advice.</p>
+      <p><a href="https://gist.github.com/khomeini0/32a446e3e0c377861ee819c4a1628359">Privacy policy</a> &middot; <a href="mailto:ocularhealth.app@gmail.com">Contact</a></p>
+    </div>
+  </footer>
+</body>
+</html>
