@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Interval Circuit Timer • AI Coach Apex</title>
+  <meta name="description" content="Zero mid-set ads. Hands-free voice & podcast pacing. Built for HIIT, Tabata & Strength.">
+  
+  <!-- OpenGraph / Facebook / Instagram -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://khomeini0.github.io/timer/">
+  <meta property="og:title" content="Interval Circuit Timer • AI Coach Apex">
+  <meta property="og:description" content="Zero mid-set ads. Hands-free voice & podcast pacing. Built for HIIT, Tabata & Strength.">
+  <meta property="og:image" content="https://khomeini0.github.io/timer/icon.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://khomeini0.github.io/timer/">
+  <meta property="twitter:title" content="Interval Circuit Timer • AI Coach Apex">
+  <meta property="twitter:description" content="Zero mid-set ads. Hands-free voice & podcast pacing. Built for HIIT, Tabata & Strength.">
+  <meta property="twitter:image" content="https://khomeini0.github.io/timer/icon.png">
+
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: #0b0d12;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(185, 255, 40, 0.12) 0%, transparent 60%),
+        radial-gradient(circle at 50% 100%, rgba(30, 41, 59, 0.4) 0%, transparent 70%);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 440px;
+      background: rgba(18, 22, 31, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 32px;
+      padding: 36px 24px;
+      box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(185, 255, 40, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .icon-wrapper {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .app-icon {
+      width: 112px;
+      height: 112px;
+      border-radius: 26px;
+      box-shadow: 
+        0 12px 28px rgba(0, 0, 0, 0.5),
+        0 0 24px rgba(185, 255, 40, 0.25);
+      display: block;
+      border: 2px solid rgba(185, 255, 40, 0.3);
+    }
+
+    .badge-live {
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #b9ff28;
+      color: #0b0d12;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(185, 255, 40, 0.4);
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #94a3b8;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      max-width: 340px;
+    }
+
+    .pills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .pill {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .pill.highlight {
+      background: rgba(185, 255, 40, 0.12);
+      border-color: rgba(185, 255, 40, 0.35);
+      color: #b9ff28;
+    }
+
+    .cta-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: #b9ff28;
+      color: #0b0d12;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 0.6px;
+      padding: 18px 24px;
+      border-radius: 18px;
+      box-shadow: 
+        0 10px 25px rgba(185, 255, 40, 0.35),
+        0 0 0 1px rgba(185, 255, 40, 0.5);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .cta-button:hover, .cta-button:active {
+      transform: translateY(-2px);
+      box-shadow: 
+        0 14px 30px rgba(185, 255, 40, 0.5),
+        0 0 0 2px #b9ff28;
+      background: #c7ff47;
+    }
+
+    .status-text {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .spinner {
+      width: 12px;
+      height: 12px;
+      border: 2px solid rgba(185, 255, 40, 0.2);
+      border-top-color: #b9ff28;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .fallback-link {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #94a3b8;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s;
+    }
+
+    .fallback-link:hover {
+      color: #b9ff28;
+    }
+
+    .footer {
+      margin-top: 24px;
+      font-size: 11px;
+      color: #475569;
+      letter-spacing: 0.3px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="icon-wrapper">
+      <img src="icon.png" alt="Interval Circuit Timer Icon" class="app-icon">
+      <span class="badge-live">Google Play</span>
+    </div>
+
+    <h1>Interval Circuit Timer</h1>
+    <p class="subtitle">Zero mid-set ads. Hands-free voice & podcast pacing. Built for HIIT, Tabata & Strength.</p>
+
+    <div class="pills-container">
+      <span class="pill highlight">⚡ AI COACH APEX</span>
+      <span class="pill">🚫 ZERO MID-SET ADS</span>
+      <span class="pill">🎙️ HANDS-FREE</span>
+    </div>
+
+    <a id="main-cta" class="cta-button" href="https://play.google.com/store/apps/details?id=com.athletictimer.interval_circuit_timer">
+      <span>OPEN IN GOOGLE PLAY</span>
+      <span style="font-size: 18px;">➔</span>
+    </a>
+
+    <div class="status-text" id="status-indicator">
+      <span class="spinner"></span>
+      <span>Opening Google Play Store...</span>
+    </div>
+
+    <a id="fallback-cta" class="fallback-link" href="https://play.google.com/store/apps/details?id=com.athletictimer.interval_circuit_timer" target="_blank" rel="noopener">
+      Tap here if not redirected automatically
+    </a>
+  </div>
+
+  <div class="footer">
+    Athletic Timer • Kh0meini
+  </div>
+
+  <script>
+    (function() {
+      var playStoreUrl = 'https://play.google.com/store/apps/details?id=com.athletictimer.interval_circuit_timer';
+      var intentUrl = 'intent://details?id=com.athletictimer.interval_circuit_timer#Intent;scheme=market;action=android.intent.action.VIEW;package=com.android.vending;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.athletictimer.interval_circuit_timer;end';
+      
+      var isAndroid = /android/i.test(navigator.userAgent);
+      var mainCta = document.getElementById('main-cta');
+      var fallbackCta = document.getElementById('fallback-cta');
+      var statusIndicator = document.getElementById('status-indicator');
+
+      if (isAndroid) {
+        // Break out of Instagram / TikTok In-App WebView directly into native Google Play Store
+        mainCta.href = intentUrl;
+        fallbackCta.href = playStoreUrl;
+
+        // Immediate intent launch attempt
+        try {
+          window.location.href = intentUrl;
+        } catch (e) {
+          window.location.replace(playStoreUrl);
+        }
+
+        // Secondary fallback timeout in case the intent didn't fire due to webview gesture requirements
+        setTimeout(function() {
+          if (statusIndicator) {
+            statusIndicator.innerHTML = '<span>Tap the neon button above to install</span>';
+          }
+        }, 2000);
+      } else {
+        // Non-Android (Desktop or iOS) - redirect directly to Google Play HTTPS web page
+        mainCta.href = playStoreUrl;
+        fallbackCta.href = playStoreUrl;
+
+        setTimeout(function() {
+          window.location.replace(playStoreUrl);
+        }, 150);
+      }
+    })();
+  </script>
+</body>
+</html>
