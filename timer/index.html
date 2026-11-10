@@ -2,304 +2,291 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Interval Circuit Timer • AI Coach Apex</title>
-  <meta name="description" content="Zero mid-set ads. Hands-free voice & podcast pacing. Built for HIIT, Tabata & Strength.">
-  <meta name="robots" content="noindex, follow">
-  
-  <!-- OpenGraph / Facebook / Instagram -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interval Circuit Timer — Hands-Free HIIT, Tabata & Strength Timer (Android)</title>
+  <meta name="description" content="Your rest ends when you say it ends. Set your work and rest once, and the app calls every set out loud, ticks every second between sets, and never shows an ad mid-workout. Free, no account, works offline.">
+  <meta name="keywords" content="interval timer, hiit timer, tabata timer, circuit timer, gym rest timer, workout timer android, hands free interval timer, emom timer, amrap timer">
+  <meta name="author" content="Limit Breaker Studios">
+  <link rel="canonical" href="https://khomeini0.github.io/timer/">
+  <link rel="alternate" hreflang="en" href="https://khomeini0.github.io/timer/">
+  <link rel="alternate" hreflang="hi" href="https://khomeini0.github.io/timer/hi/">
+  <link rel="alternate" hreflang="x-default" href="https://khomeini0.github.io/timer/">
+
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://khomeini0.github.io/timer/">
-  <meta property="og:title" content="Interval Circuit Timer • AI Coach Apex">
-  <meta property="og:description" content="Zero mid-set ads. Hands-free voice & podcast pacing. Built for HIIT, Tabata & Strength.">
+  <meta property="og:title" content="Interval Circuit Timer — Your rest ends when you say it ends">
+  <meta property="og:description" content="Hands-free voice cues, a tick every second between sets, and zero ads mid-workout. Free. No account. Works offline.">
   <meta property="og:image" content="https://khomeini0.github.io/timer/icon.png">
+  <meta property="og:locale" content="en">
+  <meta property="og:locale:alternate" content="hi_IN">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://khomeini0.github.io/timer/">
-  <meta property="twitter:title" content="Interval Circuit Timer • AI Coach Apex">
-  <meta property="twitter:description" content="Zero mid-set ads. Hands-free voice & podcast pacing. Built for HIIT, Tabata & Strength.">
-  <meta property="twitter:image" content="https://khomeini0.github.io/timer/icon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Interval Circuit Timer — Hands-Free Workout Timer">
+  <meta name="twitter:description" content="Set it once. It calls every set. No ads between your sets.">
+  <meta name="twitter:image" content="https://khomeini0.github.io/timer/icon.png">
 
   <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      -webkit-tap-highlight-color: transparent;
-    }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Interval Circuit Timer",
+    "alternateName": "Interval Timer",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Android 7.0 and up",
+    "description": "A hands-free interval and circuit timer for HIIT, Tabata, boxing, EMOM, AMRAP and strength training. Voice calls every set, a one-second pacing tick keeps you warm during rest, and no ad ever appears between your sets.",
+    "installUrl": "https://play.google.com/store/apps/details?id=com.athletictimer.interval_circuit_timer&referrer=utm_source%3Dweb%26utm_medium%3Dlanding%26utm_campaign%3Ddefault",
+    "image": "https://khomeini0.github.io/timer/icon.png",
+    "inLanguage": ["en", "hi"],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+    "featureList": [
+      "Hands-free voice cues for every set and interval",
+      "One-second rest metronome tick",
+      "Zero ads between your sets",
+      "Classic HIIT, Tabata, EMOM, AMRAP and pyramid modes",
+      "Build your own routine with up to 15 announced exercises",
+      "Get Ready countdown so you can put the phone down first",
+      "Streak protection, Grit points and post-workout summary",
+      "No account required and fully functional offline"
+    ]
+  }
+  </script>
 
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --card: rgba(18, 22, 31, 0.9);
+      --card-2: #151a24;
+      --line: rgba(255, 255, 255, 0.09);
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --dim: #64748b;
+      --lime: #b9ff28;
+      --lime-ink: #0b0d12;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
-      background-color: #0b0d12;
-      color: #f1f5f9;
+      background-color: var(--bg);
+      color: var(--text);
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.55;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 24px 16px;
-      overflow-x: hidden;
-      background-image: 
-        radial-gradient(circle at 50% 0%, rgba(185, 255, 40, 0.12) 0%, transparent 60%),
-        radial-gradient(circle at 50% 100%, rgba(30, 41, 59, 0.4) 0%, transparent 70%);
+      padding: 28px 16px 40px;
+      background-image:
+        radial-gradient(circle at 50% 0%, rgba(185, 255, 40, 0.13) 0%, transparent 58%),
+        radial-gradient(circle at 50% 100%, rgba(30, 41, 59, 0.45) 0%, transparent 70%);
     }
-
-    .container {
-      width: 100%;
-      max-width: 440px;
-      background: rgba(18, 22, 31, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    .wrap { width: 100%; max-width: 460px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 30px 22px 26px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(185, 255, 40, 0.08);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border-radius: 32px;
-      padding: 36px 24px;
-      box-shadow: 
-        0 20px 50px rgba(0, 0, 0, 0.6),
-        0 0 40px rgba(185, 255, 40, 0.08);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
       animation: fadeIn 0.4s ease-out;
     }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(16px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .icon-wrapper {
-      position: relative;
-      margin-bottom: 24px;
-    }
-
+    .icon-row { display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .icon-wrap { position: relative; }
     .app-icon {
-      width: 112px;
-      height: 112px;
-      border-radius: 26px;
-      box-shadow: 
-        0 12px 28px rgba(0, 0, 0, 0.5),
-        0 0 24px rgba(185, 255, 40, 0.25);
-      display: block;
+      width: 96px; height: 96px; border-radius: 24px; display: block;
       border: 2px solid rgba(185, 255, 40, 0.3);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 24px rgba(185, 255, 40, 0.22);
     }
-
     .badge-live {
-      position: absolute;
-      bottom: -8px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #b9ff28;
-      color: #0b0d12;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 20px;
-      white-space: nowrap;
+      position: absolute; bottom: -9px; left: 50%; transform: translateX(-50%);
+      background: var(--lime); color: var(--lime-ink);
+      font-size: 10px; font-weight: 800; letter-spacing: 0.9px; text-transform: uppercase;
+      padding: 4px 11px; border-radius: 20px; white-space: nowrap;
       box-shadow: 0 4px 12px rgba(185, 255, 40, 0.4);
     }
 
-    h1 {
-      font-size: 24px;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-      line-height: 1.25;
-      color: #ffffff;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-    }
+    h1 { font-size: 23px; font-weight: 900; letter-spacing: -0.4px; line-height: 1.25; text-transform: uppercase; text-align: center; }
+    .tagline { font-size: 14px; color: var(--muted); text-align: center; margin-top: 10px; }
+    .tagline strong { color: var(--lime); font-weight: 700; }
 
-    .subtitle {
-      font-size: 14px;
-      color: #94a3b8;
-      line-height: 1.5;
-      margin-bottom: 20px;
-      max-width: 340px;
-    }
-
-    .pills-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-
+    .pills { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; margin: 18px 0 22px; }
     .pill {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      padding: 6px 12px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #cbd5e1;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase;
+      padding: 6px 11px; border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #cbd5e1;
     }
+    .pill.hi { background: rgba(185, 255, 40, 0.12); border-color: rgba(185, 255, 40, 0.35); color: var(--lime); }
 
-    .pill.highlight {
-      background: rgba(185, 255, 40, 0.12);
-      border-color: rgba(185, 255, 40, 0.35);
-      color: #b9ff28;
+    .reasons { display: grid; gap: 12px; margin: 4px 0 24px; }
+    .reason {
+      display: flex; gap: 13px; align-items: flex-start;
+      background: var(--card-2); border: 1px solid var(--line); border-radius: 16px; padding: 14px 15px;
     }
+    .num {
+      flex: 0 0 26px; height: 26px; border-radius: 9px; display: grid; place-items: center;
+      background: rgba(185, 255, 40, 0.13); color: var(--lime); font-weight: 900; font-size: 12px;
+      border: 1px solid rgba(185, 255, 40, 0.28);
+    }
+    .reason h3 { font-size: 14.5px; font-weight: 800; margin-bottom: 3px; }
+    .reason p { font-size: 13px; color: var(--muted); }
 
-    .cta-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      background: #b9ff28;
-      color: #0b0d12;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 900;
-      letter-spacing: 0.6px;
-      padding: 18px 24px;
-      border-radius: 18px;
-      box-shadow: 
-        0 10px 25px rgba(185, 255, 40, 0.35),
-        0 0 0 1px rgba(185, 255, 40, 0.5);
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: pointer;
-      text-transform: uppercase;
+    .cta {
+      display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
+      background: var(--lime); color: var(--lime-ink); text-decoration: none;
+      font-size: 16px; font-weight: 900; letter-spacing: 0.6px; text-transform: uppercase;
+      padding: 18px 22px; border-radius: 18px; cursor: pointer;
+      box-shadow: 0 10px 25px rgba(185, 255, 40, 0.35), 0 0 0 1px rgba(185, 255, 40, 0.5);
+      transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.18s ease;
     }
+    .cta:hover { transform: translateY(-2px); background: #c7ff47; }
+    .cta:active { transform: translateY(1px); }
+    .cta-note { font-size: 12px; color: var(--dim); text-align: center; margin-top: 11px; }
 
-    .cta-button:hover, .cta-button:active {
-      transform: translateY(-2px);
-      box-shadow: 
-        0 14px 30px rgba(185, 255, 40, 0.5),
-        0 0 0 2px #b9ff28;
-      background: #c7ff47;
-    }
+    .steps { margin: 24px 0 6px; display: grid; gap: 10px; }
+    .step { display: flex; gap: 12px; align-items: flex-start; font-size: 13.5px; color: var(--muted); }
+    .step b { color: var(--text); font-weight: 700; }
+    .step-n { flex: 0 0 20px; height: 20px; border-radius: 6px; display: grid; place-items: center; background: rgba(255,255,255,0.07); border: 1px solid var(--line); font-size: 11px; font-weight: 800; color: var(--muted); }
 
-    .status-text {
-      font-size: 12px;
-      color: #64748b;
-      margin-top: 18px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+    .fallback {
+      display: block; text-align: center; margin-top: 18px;
+      font-size: 13px; color: var(--muted); text-decoration: underline; text-underline-offset: 3px;
     }
+    .fallback:hover { color: var(--lime); }
 
-    .spinner {
-      width: 12px;
-      height: 12px;
-      border: 2px solid rgba(185, 255, 40, 0.2);
-      border-top-color: #b9ff28;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-    }
+    .lang { display: block; text-align: center; margin-top: 14px; font-size: 12.5px; color: var(--dim); text-decoration: none; }
+    .lang:hover { color: var(--lime); }
 
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
+    .divider { height: 1px; background: var(--line); margin: 24px 0 18px; }
 
-    .fallback-link {
-      margin-top: 14px;
-      font-size: 13px;
-      color: #94a3b8;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      transition: color 0.2s;
-    }
+    .proof { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: center; margin-top: 20px; }
+    .proof span { font-size: 12px; color: var(--dim); }
+    .proof span::before { content: "\2713"; color: var(--lime); font-weight: 800; margin-right: 6px; }
 
-    .fallback-link:hover {
-      color: #b9ff28;
-    }
-
-    .footer {
-      margin-top: 24px;
-      font-size: 11px;
-      color: #475569;
-      letter-spacing: 0.3px;
-    }
+    .footer { margin-top: 22px; text-align: center; font-size: 11px; color: #475569; letter-spacing: 0.3px; }
+    .footer a { color: var(--dim); }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="icon-wrapper">
-      <img src="icon.png" alt="Interval Circuit Timer Icon" class="app-icon">
-      <span class="badge-live">Google Play</span>
+  <div class="wrap">
+    <div class="card">
+      <div class="icon-row">
+        <div class="icon-wrap">
+          <img src="icon.png" alt="Interval Circuit Timer app icon" class="app-icon" width="96" height="96">
+          <span class="badge-live">Android</span>
+        </div>
+      </div>
+
+      <h1>Interval Circuit Timer</h1>
+      <p class="tagline"><strong>Your rest ends when you say it ends.</strong><br>Set it once. It calls every set. You never touch your phone mid-workout.</p>
+
+      <div class="pills">
+        <span class="pill hi">Hands-free voice cues</span>
+        <span class="pill">Zero ads between sets</span>
+        <span class="pill">No account</span>
+      </div>
+
+      <div class="reasons">
+        <div class="reason">
+          <span class="num">1</span>
+          <div>
+            <h3>It calls the next set out loud</h3>
+            <p>Put the phone in your bag. It announces every round, counts you in from three, and never lets a set slip past.</p>
+          </div>
+        </div>
+        <div class="reason">
+          <span class="num">2</span>
+          <div>
+            <h3>A tick every second keeps you warm</h3>
+            <p>One steady tick through every rest. You stay breathing, you stay ready, and set five starts the same way set one did.</p>
+          </div>
+        </div>
+        <div class="reason">
+          <span class="num">3</span>
+          <div>
+            <h3>No ads between your sets</h3>
+            <p>Zero mid-set ads. Your screen shows the clock, not a banner. Works fully offline with no account and no sign-up.</p>
+          </div>
+        </div>
+      </div>
+
+      <a id="install" class="cta" href="https://play.google.com/store/apps/details?id=com.athletictimer.interval_circuit_timer">
+        <span>Open in Google Play</span>
+        <span style="font-size:18px;">&#10148;</span>
+      </a>
+      <p class="cta-note">Tap the button. It opens Google Play in the Play Store app.</p>
+
+      <div class="steps">
+        <div class="step"><span class="step-n">1</span><span><b>Tap install</b> on the Play Store page.</span></div>
+        <div class="step"><span class="step-n">2</span><span><b>Open the app.</b> No account, no sign-up, nothing to configure.</span></div>
+        <div class="step"><span class="step-n">3</span><span><b>Pick your intervals</b> — 30s work / 90s rest is a good start — and press start.</span></div>
+      </div>
+
+      <a id="install-fallback" class="fallback" href="https://play.google.com/store/apps/details?id=com.athletictimer.interval_circuit_timer">Not opening? Tap here for the Play Store listing</a>
+
+      <div class="divider"></div>
+
+      <div class="proof">
+        <span>Free</span>
+        <span>No account</span>
+        <span>Works offline</span>
+        <span>HIIT, Tabata, EMOM, AMRAP</span>
+      </div>
+
+      <a class="lang" href="hi/" hreflang="hi" lang="hi">&#2377;&#2344;&#2381;&#2342;&#2368; &#2350;&#2375;&#2306; &#2342;&#2375;&#2326;&#2375;&#2344; &#2325;&#2352;&#2367;&#2310;</a>
     </div>
 
-    <h1>Interval Circuit Timer</h1>
-    <p class="subtitle">Zero mid-set ads. Hands-free voice & podcast pacing. Built for HIIT, Tabata & Strength.</p>
-
-    <div class="pills-container">
-      <span class="pill highlight">⚡ AI COACH APEX</span>
-      <span class="pill">🚫 ZERO MID-SET ADS</span>
-      <span class="pill">🎙️ HANDS-FREE</span>
+    <div class="footer">
+      Athletic Timer &middot; Kh0meini &middot; Limit Breaker Studios<br>
+      <a href="https://gist.github.com/khomeini0/32a446e3e0c377861ee819c4a1628359" rel="noopener" target="_blank">Privacy Policy</a>
     </div>
-
-    <a id="main-cta" class="cta-button" href="https://play.google.com/store/apps/details?id=com.athletictimer.interval_circuit_timer">
-      <span>OPEN IN GOOGLE PLAY</span>
-      <span style="font-size: 18px;">➔</span>
-    </a>
-
-    <div class="status-text" id="status-indicator">
-      <span class="spinner"></span>
-      <span>Opening Google Play Store...</span>
-    </div>
-
-    <a id="fallback-cta" class="fallback-link" href="https://play.google.com/store/apps/details?id=com.athletictimer.interval_circuit_timer" target="_blank" rel="noopener">
-      Tap here if not redirected automatically
-    </a>
-  </div>
-
-  <div class="footer">
-    Athletic Timer • Kh0meini
   </div>
 
   <script>
-    (function() {
-      var playStoreUrl = 'https://play.google.com/store/apps/details?id=com.athletictimer.interval_circuit_timer';
-      var intentUrl = 'intent://details?id=com.athletictimer.interval_circuit_timer#Intent;scheme=market;action=android.intent.action.VIEW;package=com.android.vending;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.athletictimer.interval_circuit_timer;end';
-      
+    (function () {
+      var PKG = 'com.athletictimer.interval_circuit_timer';
+
+      // 1. Forward the campaign into the Google Play install referrer, so
+      //    Play Console shows which reel produced the install.
+      var params = new URLSearchParams(window.location.search);
+      var referrer = 'utm_source=' + (params.get('utm_source') || 'web') +
+                     '&utm_medium=' + (params.get('utm_medium') || 'landing') +
+                     '&utm_campaign=' + (params.get('utm_campaign') || 'default') +
+                     '&utm_content=' + (params.get('utm_content') || '');
+      var playUrl = 'https://play.google.com/store/apps/details?id=' + PKG +
+                    '&referrer=' + encodeURIComponent(referrer);
+
+      var install = document.getElementById('install');
+      var fallback = document.getElementById('install-fallback');
+      fallback.href = playUrl;
+
       var isAndroid = /android/i.test(navigator.userAgent);
-      var mainCta = document.getElementById('main-cta');
-      var fallbackCta = document.getElementById('fallback-cta');
-      var statusIndicator = document.getElementById('status-indicator');
-
       if (isAndroid) {
-        // Break out of Instagram / TikTok In-App WebView directly into native Google Play Store
-        mainCta.href = intentUrl;
-        fallbackCta.href = playStoreUrl;
-
-        // Immediate intent launch attempt
-        try {
-          window.location.href = intentUrl;
-        } catch (e) {
-          window.location.replace(playStoreUrl);
-        }
-
-        // Secondary fallback timeout in case the intent didn't fire due to webview gesture requirements
-        setTimeout(function() {
-          if (statusIndicator) {
-            statusIndicator.innerHTML = '<span>Tap the neon button above to install</span>';
-          }
-        }, 2000);
+        // 2. Instagram's in-app browser is a Chrome Custom Tab. A scripted
+        //    navigation to a custom scheme has no user gesture and is blocked,
+        //    so the button carries the intent URL and the tap does the work.
+        //    S.browser_fallback_url hands off to the https listing if the
+        //    Play Store app cannot take the intent.
+        var intentUrl = 'intent://details?id=' + PKG +
+          '#Intent;scheme=market;action=android.intent.action.VIEW;' +
+          'package=com.android.vending;' +
+          'S.browser_fallback_url=' + encodeURIComponent(playUrl) + ';end';
+        install.href = intentUrl;
       } else {
-        // Non-Android (Desktop or iOS) - redirect directly to Google Play HTTPS web page
-        mainCta.href = playStoreUrl;
-        fallbackCta.href = playStoreUrl;
-
-        setTimeout(function() {
-          window.location.replace(playStoreUrl);
-        }, 150);
+        install.href = playUrl;
       }
+
+      // 3. No auto-redirect. It cannot fire from an in-app browser without a
+      //    gesture, and it would throw the visitor off the page before they
+      //    have seen why the app is worth installing.
     })();
   </script>
 </body>

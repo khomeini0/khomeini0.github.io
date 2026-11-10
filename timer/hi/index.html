@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>इंटरवल सर्किट टाइमर — HIIT, टाबाटा और स्ट्रेंथ टाइमर (Android)</title>
+  <meta name="description" content="रेस्ट आपके तय किए समय पर ख़त्म होगा। एक बार वर्क और रेस्ट सेट करें — ऐप हर सेट की आवाज़ में बताएगा, हर सेकंड टिक करेगा, और सेट के बीच कोई ऐड नहीं दिखाएगा। मुफ़्त, बिना अकाउंट, ऑफ़लाइन भी चलता है।">
+  <meta name="keywords" content="इंटरवल टाइमर, hiit टाइमर, टाबाटा टाइमर, जिम टाइमर, वर्कआउट टाइमर, रेस्ट टाइमर, हिंदी टाइमर">
+  <meta name="author" content="Limit Breaker Studios">
+  <link rel="canonical" href="https://khomeini0.github.io/timer/hi/">
+  <link rel="alternate" hreflang="en" href="https://khomeini0.github.io/timer/">
+  <link rel="alternate" hreflang="hi" href="https://khomeini0.github.io/timer/hi/">
+  <link rel="alternate" hreflang="x-default" href="https://khomeini0.github.io/timer/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://khomeini0.github.io/timer/hi/">
+  <meta property="og:title" content="इंटरवल सर्किट टाइमर — रेस्ट आपके तय समय पर ख़त्म">
+  <meta property="og:description" content="बिना फ़ोन छुए हर सेट की आवाज़ में सूचना। हर सेकंड एक टिक। सेट के बीच कोई ऐड नहीं। मुफ़्त।">
+  <meta property="og:image" content="https://khomeini0.github.io/timer/icon.png">
+  <meta property="og:locale" content="hi_IN">
+  <meta property="og:locale:alternate" content="en">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="इंटरवल सर्किट टाइमर — बिना फ़ोन छुए वर्कआउट टाइमर">
+  <meta name="twitter:description" content="एक बार सेट करें। हर सेट आवाज़ में बताएगा। सेट के बीच कोई ऐड नहीं।">
+  <meta name="twitter:image" content="https://khomeini0.github.io/timer/icon.png">
+
+  <link rel="icon" type="image/png" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Interval Circuit Timer",
+    "alternateName": "इंटरवल सर्किट टाइमर",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Android 7.0 and up",
+    "inLanguage": "hi",
+    "description": "HIIT, टाबाटा, बॉक्सिंग, EMOM, AMRAP और स्ट्रेंथ ट्रेनिंग के लिए बिना फ़ोन छुए इंटरवल टाइमर। हर सेट की आवाज़ में सूचना, रेस्ट के दौरान हर सेकंड का टिक, और सेट के बीच कोई ऐड नहीं।",
+    "installUrl": "https://play.google.com/store/apps/details?id=com.athletictimer.interval_circuit_timer&referrer=utm_source%3Dweb%26utm_medium%3Dlanding%26utm_campaign%3Ddefault_hi",
+    "image": "https://khomeini0.github.io/timer/icon.png",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --card: rgba(18, 22, 31, 0.9);
+      --card-2: #151a24;
+      --line: rgba(255, 255, 255, 0.09);
+      --text: #f1f5f9;
+      --muted: #a8b6c4;
+      --dim: #64748b;
+      --lime: #b9ff28;
+      --lime-ink: #0b0d12;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 28px 16px 40px;
+      background-image:
+        radial-gradient(circle at 50% 0%, rgba(185, 255, 40, 0.13) 0%, transparent 58%),
+        radial-gradient(circle at 50% 100%, rgba(30, 41, 59, 0.45) 0%, transparent 70%);
+    }
+    .wrap { width: 100%; max-width: 460px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 30px 22px 26px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(185, 255, 40, 0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      animation: fadeIn 0.4s ease-out;
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+    .icon-row { display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .icon-wrap { position: relative; }
+    .app-icon {
+      width: 96px; height: 96px; border-radius: 24px; display: block;
+      border: 2px solid rgba(185, 255, 40, 0.3);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 24px rgba(185, 255, 40, 0.22);
+    }
+    .badge-live {
+      position: absolute; bottom: -9px; left: 50%; transform: translateX(-50%);
+      background: var(--lime); color: var(--lime-ink);
+      font-family: 'Mukta', sans-serif;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.6px;
+      padding: 4px 12px; border-radius: 20px; white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(185, 255, 40, 0.4);
+    }
+
+    h1 { font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif; font-size: 24px; font-weight: 800; line-height: 1.4; text-align: center; }
+    .tagline { font-size: 14.5px; color: var(--muted); text-align: center; margin-top: 10px; }
+    .tagline strong { color: var(--lime); font-weight: 600; }
+
+    .pills { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; margin: 18px 0 22px; }
+    .pill {
+      font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+      font-size: 12px; font-weight: 700;
+      padding: 5px 12px; border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #cbd5e1;
+    }
+    .pill.hi { background: rgba(185, 255, 40, 0.12); border-color: rgba(185, 255, 40, 0.35); color: var(--lime); }
+
+    .reasons { display: grid; gap: 12px; margin: 4px 0 24px; }
+    .reason {
+      display: flex; gap: 13px; align-items: flex-start;
+      background: var(--card-2); border: 1px solid var(--line); border-radius: 16px; padding: 14px 15px;
+    }
+    .num {
+      flex: 0 0 26px; height: 26px; border-radius: 9px; display: grid; place-items: center;
+      background: rgba(185, 255, 40, 0.13); color: var(--lime); font-family: 'Mukta', sans-serif; font-weight: 800; font-size: 13px;
+      border: 1px solid rgba(185, 255, 40, 0.28);
+    }
+    .reason h3 { font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 3px; line-height: 1.5; }
+    .reason p { font-size: 13.5px; color: var(--muted); line-height: 1.65; }
+
+    .cta {
+      display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
+      background: var(--lime); color: var(--lime-ink); text-decoration: none;
+      font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+      font-size: 17px; font-weight: 800;
+      padding: 17px 20px; border-radius: 18px; cursor: pointer;
+      box-shadow: 0 10px 25px rgba(185, 255, 40, 0.35), 0 0 0 1px rgba(185, 255, 40, 0.5);
+      transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.18s ease;
+    }
+    .cta:hover { transform: translateY(-2px); background: #c7ff47; }
+    .cta:active { transform: translateY(1px); }
+    .cta-note { font-size: 12.5px; color: var(--dim); text-align: center; margin-top: 11px; }
+
+    .steps { margin: 24px 0 6px; display: grid; gap: 10px; }
+    .step { display: flex; gap: 12px; align-items: flex-start; font-size: 13.5px; color: var(--muted); }
+    .step b { color: var(--text); font-weight: 600; }
+    .step-n { flex: 0 0 22px; height: 22px; border-radius: 7px; display: grid; place-items: center; background: rgba(255,255,255,0.07); border: 1px solid var(--line); font-family: 'Mukta', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); }
+
+    .fallback {
+      display: block; text-align: center; margin-top: 18px;
+      font-size: 13.5px; color: var(--muted); text-decoration: underline; text-underline-offset: 3px;
+    }
+    .fallback:hover { color: var(--lime); }
+
+    .lang { display: block; text-align: center; margin-top: 14px; font-size: 12.5px; color: var(--dim); text-decoration: none; }
+    .lang:hover { color: var(--lime); }
+
+    .divider { height: 1px; background: var(--line); margin: 24px 0 18px; }
+
+    .proof { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: center; margin-top: 20px; }
+    .proof span { font-size: 12.5px; color: var(--dim); }
+    .proof span::before { content: "\2713"; color: var(--lime); font-weight: 800; margin-right: 6px; }
+
+    .note { font-size: 12px; color: var(--dim); text-align: center; margin-top: 14px; line-height: 1.6; }
+    .footer { margin-top: 22px; text-align: center; font-size: 11px; color: #475569; letter-spacing: 0.3px; }
+    .footer a { color: var(--dim); }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="card">
+      <div class="icon-row">
+        <div class="icon-wrap">
+          <img src="../icon.png" alt="इंटरवल सर्किट टाइमर ऐप आइकॉन" class="app-icon" width="96" height="96">
+          <span class="badge-live">Android</span>
+        </div>
+      </div>
+
+      <h1>इंटरवल सर्किट टाइमर</h1>
+      <p class="tagline"><strong>रेस्ट आपके तय किए समय पर ख़त्म होगा।</strong><br>एक बार वर्क और रेस्ट सेट करें — हर सेट की आवाज़ में सूचना मिलेगी, बीच में फ़ोन छूना नहीं पड़ेगा।</p>
+
+      <div class="pills">
+        <span class="pill hi">बिना फ़ोन छुए</span>
+        <span class="pill">सेट के बीच कोई ऐड नहीं</span>
+        <span class="pill">बिना अकाउंट</span>
+      </div>
+
+      <div class="reasons">
+        <div class="reason">
+          <span class="num">1</span>
+          <div>
+            <h3>हर सेट की आवाज़ में सूचना</h3>
+            <p>फ़ोन बैग में रख दीजिए। ऐप हर राउंड की घोषणा करेगा, तीन से गिनती शुरू करेगा, और कोई सेट छूटेगी नहीं।</p>
+          </div>
+        </div>
+        <div class="reason">
+          <span class="num">2</span>
+          <div>
+            <h3>हर सेकंड एक टिक — आप गरम रहते हैं</h3>
+            <p>पूरे रेस्ट में एक स्थिर टिक। साँस चलती रहती है, शरीर तैयार रहता है, और पाँचवाँ सेट पहले जैसा ही शुरू होता है।</p>
+          </div>
+        </div>
+        <div class="reason">
+          <span class="num">3</span>
+          <div>
+            <h3>सेट के बीच कोई ऐड नहीं</h3>
+            <p>वर्कआउट के बीच बिल्कुल कोई ऐड नहीं। स्क्रीन पर सिर्फ़ घड़ी दिखती है। पूरी तरह ऑफ़लाइन चलता है — बिना अकाउंट, बिना साइन-अप।</p>
+          </div>
+        </div>
+      </div>
+
+      <a id="install" class="cta" href="https://play.google.com/store/apps/details?id=com.athletictimer.interval_circuit_timer">
+        <span>गूगल प्ले पर इंस्टॉल करें</span>
+        <span style="font-size:18px;">&#10148;</span>
+      </a>
+      <p class="cta-note">बटन दबाइए — यह गूगल प्ले ऐप खोल देगा।</p>
+
+      <div class="steps">
+        <div class="step"><span class="step-n">1</span><span><b>इंस्टॉल</b> पर टैप करें।</span></div>
+        <div class="step"><span class="step-n">2</span><span><b>ऐप खोलिए।</b> न अकाउंट, न साइन-अप, कोई सेटअप नहीं।</span></div>
+        <div class="step"><span class="step-n">3</span><span><b>इंटरवल चुनिए</b> — 30 सेकंड वर्क / 90 सेकंड रेस्ट — और स्टार्ट दबा दीजिए।</span></div>
+      </div>
+
+      <a id="install-fallback" class="fallback" href="https://play.google.com/store/apps/details?id=com.athletictimer.interval_circuit_timer">नहीं खुल रहा? यहाँ टैप करें</a>
+
+      <div class="divider"></div>
+
+      <div class="proof">
+        <span>मुफ़्त</span>
+        <span>बिना अकाउंट</span>
+        <span>ऑफ़लाइन चलता है</span>
+        <span>HIIT, टाबाटा, EMOM, AMRAP</span>
+      </div>
+
+      <p class="note">ऐप का इंटरफ़ेस अंग्रेज़ी में है।</p>
+
+      <a class="lang" href="../" hreflang="en" lang="en">View in English</a>
+    </div>
+
+    <div class="footer">
+      Athletic Timer &middot; Kh0meini &middot; Limit Breaker Studios<br>
+      <a href="https://gist.github.com/khomeini0/32a446e3e0c377861ee819c4a1628359" rel="noopener" target="_blank">Privacy Policy</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var PKG = 'com.athletictimer.interval_circuit_timer';
+
+      var params = new URLSearchParams(window.location.search);
+      var referrer = 'utm_source=' + (params.get('utm_source') || 'web') +
+                     '&utm_medium=' + (params.get('utm_medium') || 'landing') +
+                     '&utm_campaign=' + (params.get('utm_campaign') || 'default_hi') +
+                     '&utm_content=' + (params.get('utm_content') || '');
+      var playUrl = 'https://play.google.com/store/apps/details?id=' + PKG +
+                    '&referrer=' + encodeURIComponent(referrer);
+
+      var install = document.getElementById('install');
+      var fallback = document.getElementById('install-fallback');
+      fallback.href = playUrl;
+
+      var isAndroid = /android/i.test(navigator.userAgent);
+      if (isAndroid) {
+        var intentUrl = 'intent://details?id=' + PKG +
+          '#Intent;scheme=market;action=android.intent.action.VIEW;' +
+          'package=com.android.vending;' +
+          'S.browser_fallback_url=' + encodeURIComponent(playUrl) + ';end';
+        install.href = intentUrl;
+      } else {
+        install.href = playUrl;
+      }
+    })();
+  </script>
+</body>
+</html>
