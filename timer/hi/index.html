@@ -130,6 +130,18 @@
     .reason h3 { font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 3px; line-height: 1.5; }
     .reason p { font-size: 13.5px; color: var(--muted); line-height: 1.65; }
 
+    .shots { display: flex; gap: 10px; margin: 0 0 24px; }
+    .shots figure { flex: 1; margin: 0; min-width: 0; }
+    .shots img {
+      width: 100%; height: auto; display: block; border-radius: 14px;
+      border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    }
+    .shots figcaption {
+      font-family: 'Mukta', sans-serif;
+      font-size: 11.5px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase;
+      color: var(--dim); text-align: center; margin-top: 8px;
+    }
+
     .cta {
       display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
       background: var(--lime); color: var(--lime-ink); text-decoration: none;
@@ -210,6 +222,17 @@
             <p>वर्कआउट के बीच बिल्कुल कोई ऐड नहीं। स्क्रीन पर सिर्फ़ घड़ी दिखती है। पूरी तरह ऑफ़लाइन चलता है — बिना अकाउंट, बिना साइन-अप।</p>
           </div>
         </div>
+      </div>
+
+      <div class="shots">
+        <figure>
+          <img src="../img/workout.png" alt="इंटरवल सर्किट टाइमर — वर्क इंटरवल, हरी घड़ी" loading="lazy" width="412" height="915">
+          <figcaption>वर्क</figcaption>
+        </figure>
+        <figure>
+          <img src="../img/rest.png" alt="इंटरवल सर्किट टाइमर — रेस्ट इंटरवल, पीली घड़ी" loading="lazy" width="412" height="915">
+          <figcaption>रेस्ट</figcaption>
+        </figure>
       </div>
 
       <a id="install" class="cta" href="https://play.google.com/store/apps/details?id=com.athletictimer.interval_circuit_timer">

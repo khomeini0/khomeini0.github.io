@@ -138,6 +138,17 @@
     .reason h3 { font-size: 14.5px; font-weight: 800; margin-bottom: 3px; }
     .reason p { font-size: 13px; color: var(--muted); }
 
+    .shots { display: flex; gap: 10px; margin: 0 0 24px; }
+    .shots figure { flex: 1; margin: 0; min-width: 0; }
+    .shots img {
+      width: 100%; height: auto; display: block; border-radius: 14px;
+      border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    }
+    .shots figcaption {
+      font-size: 10px; font-weight: 800; letter-spacing: 0.9px; text-transform: uppercase;
+      color: var(--dim); text-align: center; margin-top: 8px;
+    }
+
     .cta {
       display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
       background: var(--lime); color: var(--lime-ink); text-decoration: none;
@@ -216,6 +227,17 @@
             <p>Zero mid-set ads. Your screen shows the clock, not a banner. Works fully offline with no account and no sign-up.</p>
           </div>
         </div>
+      </div>
+
+      <div class="shots">
+        <figure>
+          <img src="img/workout.png" alt="Interval Circuit Timer showing a work interval counting down on a lime ring" loading="lazy" width="412" height="915">
+          <figcaption>Work</figcaption>
+        </figure>
+        <figure>
+          <img src="img/rest.png" alt="Interval Circuit Timer showing a rest interval counting down on an amber ring" loading="lazy" width="412" height="915">
+          <figcaption>Rest</figcaption>
+        </figure>
       </div>
 
       <a id="install" class="cta" href="https://play.google.com/store/apps/details?id=com.athletictimer.interval_circuit_timer">
