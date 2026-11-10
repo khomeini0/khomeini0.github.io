@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The 20-20-20 Rule vs. Pomodoro: Stacking Deep Focus & Eye Health | Ocular</title>
+  <meta name="description" content="Discover how to combine the 20-20-20 rule with the Pomodoro technique. Learn why a 5-minute Pomodoro break won't save your eyes if you check your phone, and how to habit-stack micro-breaks.">
+  <meta name="keywords" content="20-20-20 rule vs pomodoro, pomodoro eye strain, screen fatigue pomodoro, 20-20-20 timer and pomodoro, habit stacking eye rest, developer deep work eye strain">
+  <meta name="author" content="Limit Breaker Studios">
+  <link rel="canonical" href="https://khomeini0.github.io/guides/20-20-20-rule-vs-pomodoro/">
+  <link rel="icon" href="../../assets/ocular-icon.png">
+  <meta name="theme-color" content="#0b1214">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:site_name" content="Ocular">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The 20-20-20 Rule vs. Pomodoro: Stacking Deep Focus & Eye Health">
+  <meta property="og:description" content="Why 5-minute Pomodoro breaks don't prevent visual fatigue, and how to sync 20-second ocular rests inside deep work sprints.">
+  <meta property="og:url" content="https://khomeini0.github.io/guides/20-20-20-rule-vs-pomodoro/">
+  <meta property="og:image" content="https://khomeini0.github.io/assets/ocular-timer.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The 20-20-20 Rule vs. Pomodoro: Stacking Deep Focus & Eye Health">
+  <meta name="twitter:description" content="Why your Pomodoro timer isn't saving your eyes, and how to combine 20-second visual rests without breaking flow state.">
+  <meta name="twitter:image" content="https://khomeini0.github.io/assets/ocular-timer.jpg">
+
+  <!-- JSON-LD Structured Data: BreadcrumbList, Article, & FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://khomeini0.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guides",
+            "item": "https://khomeini0.github.io/#the-rule"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "20-20-20 Rule vs. Pomodoro",
+            "item": "https://khomeini0.github.io/guides/20-20-20-rule-vs-pomodoro/"
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "https://khomeini0.github.io/guides/20-20-20-rule-vs-pomodoro/#article",
+        "headline": "The 20-20-20 Rule vs. the Pomodoro Technique: How to Stack Deep Focus with Eye Health",
+        "description": "An ergonomics and productivity guide comparing the 20-20-20 rule and the Pomodoro method, showing how to synchronize cognitive sprints with visual micro-rests.",
+        "author": {
+          "@type": "Organization",
+          "name": "Limit Breaker Studios"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Limit Breaker Studios",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://khomeini0.github.io/assets/ocular-icon.png"
+          }
+        },
+        "datePublished": "2026-11-10",
+        "dateModified": "2026-11-10",
+        "mainEntityOfPage": "https://khomeini0.github.io/guides/20-20-20-rule-vs-pomodoro/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://khomeini0.github.io/guides/20-20-20-rule-vs-pomodoro/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does the Pomodoro technique protect your eyes from digital eye strain?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not automatically. The standard Pomodoro technique schedules a 5-minute break every 25 minutes. However, if you spend those 5 minutes checking notifications on your smartphone or reading an article, your eyes remain locked in near-distance focus, offering zero relief to the ciliary muscles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will taking a 20-second break every 20 minutes ruin my flow state?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Unlike cognitive task-switching, a 20-20-20 break requires only shifting gaze to optical infinity (20 feet away) and taking a few deliberate blinks. Your mind remains parked on your train of thought, and you return within 20 seconds with less physical visual strain."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How should I synchronize the 20-20-20 rule with Pomodoro intervals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can either align your Pomodoro sprint to 20 minutes (20 minutes work, 20 seconds visual gaze, continue to 40 minutes before a 5-minute physical walk) or keep 25-minute Pomodoros while using a lightweight overlay timer like Ocular that flashes a gentle 20-second prompt without breaking your screen workflow."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0b1214;
+      --card: #141d20;
+      --card-2: #1b292d;
+      --card-hover: #1e2e33;
+      --line: rgba(255, 255, 255, 0.10);
+      --text: #f1f6f5;
+      --muted: #9db0ad;
+      --accent: #4fd1c5;
+      --accent-hover: #38b2ac;
+      --accent-ink: #062321;
+      --badge-bg: rgba(79, 209, 197, 0.12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+    header.top {
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.15rem;
+    }
+    .brand img {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+    }
+    nav.top-nav {
+      display: flex;
+      gap: 18px;
+    }
+    nav.top-nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    nav.top-nav a:hover {
+      color: var(--accent);
+    }
+
+    .breadcrumb {
+      margin: 28px 0 16px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .breadcrumb a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { opacity: 0.5; }
+
+    article h1 {
+      font-size: clamp(2rem, 5vw, 2.9rem);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      margin: 12px 0 18px;
+      font-weight: 800;
+      text-wrap: balance;
+    }
+    .article-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin: 44px 0 16px;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+    h3 {
+      font-size: 1.2rem;
+      margin: 28px 0 12px;
+      color: var(--text);
+    }
+    p { margin: 0 0 18px; color: #d7e2e0; }
+    .lead {
+      font-size: 1.2rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+    ul, ol {
+      margin: 0 0 24px;
+      padding-left: 1.4em;
+      color: #d7e2e0;
+    }
+    li { margin-bottom: 10px; }
+    strong { color: #ffffff; }
+
+    .callout {
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 16px 16px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 32px 0;
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.95rem;
+    }
+    .comparison-table th {
+      background: var(--card-2);
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    .app-cta-banner {
+      background: linear-gradient(135deg, rgba(20, 29, 32, 0.95) 0%, rgba(27, 41, 45, 0.95) 100%);
+      border: 1px solid rgba(79, 209, 197, 0.3);
+      border-radius: 20px;
+      padding: 32px 28px;
+      margin: 48px 0;
+      text-align: center;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+    }
+    .app-cta-banner h3 {
+      font-size: 1.4rem;
+      margin: 0 0 10px;
+      color: #ffffff;
+    }
+    .app-cta-banner p {
+      max-width: 58ch;
+      margin: 0 auto 20px;
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: var(--accent-ink);
+      padding: 14px 26px;
+      border-radius: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .15s ease, background-color .15s ease;
+      box-shadow: 0 8px 24px rgba(79, 209, 197, 0.22);
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      background: var(--accent-hover);
+    }
+    .btn-icon { width: 20px; height: 20px; fill: currentColor; }
+
+    details {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+    }
+    details[open] { background: var(--card-2); border-color: rgba(79, 209, 197, 0.3); }
+    summary { cursor: pointer; font-weight: 650; font-size: 1.05rem; }
+    details p { margin: 12px 0 0; color: var(--muted); }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 36px 0 54px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 60px;
+    }
+    footer a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+    footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="../../">
+        <img src="../../assets/ocular-icon.png" alt="Ocular Icon" width="36" height="36">
+        <span>Ocular</span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="../../#the-rule">The 20-20-20 Rule</a>
+        <a href="../../#features">Android App</a>
+        <a href="../../#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <div class="breadcrumb" aria-label="Breadcrumb navigation">
+      <a href="../../">Home</a>
+      <span>/</span>
+      <a href="../../#the-rule">Guides</a>
+      <span>/</span>
+      <span style="color: var(--text);">20-20-20 vs. Pomodoro</span>
+    </div>
+
+    <main>
+      <article>
+        <h1>The 20-20-20 Rule vs. The Pomodoro Technique: Stacking Focus and Eye Rest</h1>
+        <div class="article-meta">
+          <span>By Limit Breaker Studios</span> &bull; 
+          <span>Updated November 2026</span> &bull; 
+          <span>5 min read</span>
+        </div>
+
+        <p class="lead">If you work in software development, writing, design, or research, you probably swear by deep work intervals. But millions of knowledge workers face an unintended paradox: while the Pomodoro technique optimizes your brain, it frequently burns out your eyes.</p>
+
+        <p>Here is why your 5-minute break isn't saving your eyesight—and how to seamlessly habit-stack the <strong>20-20-20 rule</strong> with your focus sessions without breaking flow.</p>
+
+        <h2>The Physiological Conflict: Brain Fatigue vs. Optical Fatigue</h2>
+        <p>To understand why Pomodoro alone fails your eyes, we have to look at the two fundamentally different biological systems at play:</p>
+
+        <table class="comparison-table" aria-label="Comparison between Pomodoro Technique and 20-20-20 Rule">
+          <thead>
+            <tr>
+              <th>Dimension</th>
+              <th>Pomodoro Technique</th>
+              <th>The 20-20-20 Rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Primary Target</strong></td>
+              <td>Prefrontal Cortex (Cognitive stamina & willpower)</td>
+              <td>Ciliary Muscles & Tear Film (Optical accommodation & hydration)</td>
+            </tr>
+            <tr>
+              <td><strong>Interval Cadence</strong></td>
+              <td>25 minutes work / 5 minutes rest</td>
+              <td>Every 20 minutes / 20 seconds rest</td>
+            </tr>
+            <tr>
+              <td><strong>Nature of Break</strong></td>
+              <td>Context switch (walk, stretch, water)</td>
+              <td>Optical infinity gaze (look 20 ft away + blink)</td>
+            </tr>
+            <tr>
+              <td><strong>Flow Disruption</strong></td>
+              <td>Moderate (pauses active thinking)</td>
+              <td>Virtually zero (eyes shift, thoughts remain queued)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>The "Dirty Secret" of the 5-Minute Pomodoro Break</h2>
+        <p>What happens when the standard Pomodoro bell dings after 25 minutes? Most people push back from their monitor, reach into their pocket, and unlock their phone.</p>
+        
+        <div class="callout">
+          <p><strong>The Near-Work Trap:</strong> Swapping a 27-inch monitor 24 inches from your face for a 6.1-inch smartphone 12 inches from your face does <em>not</em> constitute eye rest. In fact, it increases accommodation tension on your ciliary muscles and sustains the reduced blink-rate reflex that accelerates corneal drying.</p>
+        </div>
+
+        <p>By the end of four standard Pomodoro cycles (two hours of work), your brain might feel proud, but your eyes have endured two continuous hours of near-distance accommodative lock.</p>
+
+        <h2>How to Habit-Stack 20-20-20 with Your Deep Work Routine</h2>
+        <p>You don't need to choose between deep focus and ocular health. Ergonomists and performance coaches recommend two proven ways to stack both protocols:</p>
+
+        <h3>Method A: The 20-Second "Gaze Pause" Inside the 25-Minute Sprint</h3>
+        <p>Unlike a Pomodoro break—which requires breaking your train of thought—a 20-20-20 rest takes only <strong>20 seconds</strong>. You don't get up, minimize your IDE, or switch tasks. When an automated gentle reminder appears:</p>
+        <ol>
+          <li>Lift your gaze off the monitor and look toward a window, hallway, or the far corner of the room (roughly 20 feet away).</li>
+          <li>Keep your mind on whatever problem you are mentally solving.</li>
+          <li>Blink 3 or 4 times to recoat your cornea with fresh tears.</li>
+          <li>Drop your gaze back to the screen after 20 seconds.</li>
+        </ol>
+        <p>Your flow state remains unbroken, but your eyes avoid sustained muscular spasm.</p>
+
+        <h3>Method B: The Harmonized 20/40 Cycle</h3>
+        <p>If you prefer strict synchronization, adjust your cognitive timer from 25 minutes to <strong>20 minutes</strong>:</p>
+        <ul>
+          <li><strong>Minute 0–20:</strong> Sprint 1 &bull; 20-second visual rest at your desk.</li>
+          <li><strong>Minute 20–40:</strong> Sprint 2 &bull; Full 5-minute physical walk away from all screens.</li>
+        </ul>
+
+        <h2>Automating Your Habit Without Annoying Clocks</h2>
+        <p>The biggest obstacle to the 20-20-20 rule is memory: when you're deeply engrossed in debugging or writing, 20 minutes feels like 5. A manual stopwatch or alarm clock is jarring and breaks immersion.</p>
+
+        <p>This is why we built <strong>Ocular</strong> for Android: an unobtrusive visual habit companion designed to run quietly alongside your work routine.</p>
+
+        <div class="app-cta-banner">
+          <h3>Protect Your Eyes Without Breaking Your Flow</h3>
+          <p>Ocular provides a discreet floating timer badge, a gentle 20-second break overlay, and smart pause during calls and media playback.</p>
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.eyecare.ocular202020&referrer=utm_source%3Docular_web%26utm_medium%3Dorganic%26utm_campaign%3Dguide_pomodoro" aria-label="Download Ocular on Google Play">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3.6 1.8c-.3.3-.5.8-.5 1.5v17.4c0 .7.2 1.2.5 1.5l.1.1 9.8-9.8v-.2L3.7 1.7l-.1.1zm1.7 11.2 2.5 2.5-2.5 2.5V13zm8.9-1.9 2.4-2.4-11.3-6.5c-.3-.2-.6-.2-.8-.1l9.7 9zm0 .4-9.7 9c.2.1.5.1.8-.1l11.3-6.5-2.4-2.4zm1.2-.2 2.8-1.6c1.1-.6 1.1-1.7 0-2.3l-2.8-1.6-1.5 1.5 1.5 4z"/>
+            </svg>
+            <span>Get Ocular for Android on Google Play</span>
+          </a>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <details>
+          <summary>Does the Pomodoro technique protect your eyes from digital eye strain?</summary>
+          <p>Not automatically. If you spend your 5-minute break scrolling on a phone or reading, your eyes remain locked in close-range focus with low blink frequency, offering zero muscular relaxation.</p>
+        </details>
+        <details>
+          <summary>Will taking a 20-second break ruin my flow state?</summary>
+          <p>No. A 20-second gaze shift doesn't require task switching. Your thoughts remain parked on your current problem while your ciliary muscles physically reset.</p>
+        </details>
+        <details>
+          <summary>Can I run Ocular alongside desktop Pomodoro timers?</summary>
+          <p>Yes. Ocular runs independently on your Android phone or tablet on your desk, keeping a visible floating indicator or subtle chime so you never have to guess when your next eye rest is due.</p>
+        </details>
+      </article>
+    </main>
+
+    <footer>
+      <p>Ocular is developed by Limit Breaker Studios. This guide is for educational ergonomic purposes and is not medical advice.</p>
+      <p>
+        <a href="../../">Home</a> &middot; 
+        <a href="https://gist.github.com/khomeini0/32a446e3e0c377861ee819c4a1628359" rel="noopener noreferrer" target="_blank">Privacy Policy</a> &middot; 
+        <a href="https://play.google.com/store/apps/details?id=com.eyecare.ocular202020&referrer=utm_source%3Docular_web%26utm_medium%3Dorganic%26utm_campaign%3Dguide_pomodoro_footer" rel="noopener noreferrer" target="_blank">Google Play Store</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
